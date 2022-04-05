@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLC control interface</title>
+  <link rel="stylesheet" href="./milligram.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <main class="wrapper">
+    <section class="flex-container">
+      <div class="flex-container-m2">
+        <div class="panel-left">
+          <div class="element">
+            <h3 class="title">Connect to a serial port</h3>
+            <button id="connect-to-serial">Connect</button>
+          </div>
+        </div>
+
+        <div class="panel-right">
+          <div class="element">
+            <h3 class="title">(Optional) Import/download timing data</h3>
+            <input type="file" id="fileField">
+            <button id="exportFile">Download</button>
+            <a id="downloadAnchorElem" style="display:none"></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="panel-main">
+        <div class="element">
+          <h3 class="title">Read from/write to DSP</h3>
+
+          <div class="flex-container-m1">
+
+            <div class="panel-ind">
+              <label for="periodField">Period</label>
+              <input type="number" value="0" id="periodField">
+              <span id="periodText">= 0 ns ( - Hz)</span>
+            </div>
+
+            <div class="panel-ind">
+              <label for="pri1reField">Primary 1 dead time RE</label>
+              <input type="number" value="0" id="pri1reField">
+              <span id="pri1reText">= 0 ns</span>
+
+              <label for="pri1feField">Primary 1 dead time FE</label>
+              <input type="number" value="0" id="pri1feField">
+              <span id="pri1feText">= 0 ns</span>
+
+            </div>
+            <div class="panel-ind">
+              <label for="pri2reField">Primary 2 dead time RE</label>
+              <input type="number" value="0" id="pri2reField">
+              <span id="pri2reText">= 0 ns</span>
+
+              <label for="pri2feField">Primary 2 dead time FE</label>
+              <input type="number" value="0" id="pri2feField">
+              <span id="pri2feText">= 0 ns</span>              
+            </div>
+          </div>
+          <div class="flex-container-m1">
+            <div class="panel-ind">
+              <label for="pri1phField">Primary 1 phase</label>
+              <input type="number" value="0" id="pri1phField">
+              <span id="pri1phText">= 0 ns</span>
+
+              <label for="pri1dcField">Primary 1 duty adjust</label>
+              <input type="number" value="0" id="pri1dcField">
+              <span id="pri1dcText">= 0 ns ( - %)</span>
+
+            </div>
+            <div class="panel-ind">
+              <label for="pri2phField">Primary 2 phase</label>
+              <input type="number" value="0" id="pri2phField">
+              <span id="pri2phText">= 0 ns</span>
+
+              <label for="pri2dcField">Primary 2 duty adjust</label>
+              <input type="number" value="0" id="pri2dcField">
+              <span id="pri2dcText">= 0 ns ( - %)</span>              
+            </div>
+            
+            <div class="panel-ind">
+              <label for="sec1phField">Secondary 1 phase</label>
+              <input type="number" value="0" id="sec1phField">
+              <span id="sec1phText">= 0 ns</span>
+
+              <label for="sec1dcField">Secondary 1 duty adjust</label>
+              <input type="number" value="0" id="sec1dcField">
+              <span id="sec1dcText">= 0 ns ( - %)</span>
+
+            </div>
+            <div class="panel-ind">
+              <label for="sec2phField">Secondary 2 phase</label>
+              <input type="number" value="0" id="sec2phField">
+              <span id="sec2phText">= 0 ns</span>
+
+              <label for="sec2dcField">Secondary 2 duty adjust</label>
+              <input type="number" value="0" id="sec2dcField">
+              <span id="sec2dcText">= 0 ns ( - %)</span>              
+            </div>
+          </div>
+          <div class="flex-container-m1" id="control-btns">
+            <div>
+              <button class="message-button" id="read-data" data-value="0" disabled="true">Read</button>
+              <button class="message-button" id="write-data" data-value="0" disabled="true">Write</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="panel-main">
+        <div class="element">
+          <h3 class="title">Log output</h3>
+        </div>
+        <form>
+          <fieldset>
+            <textarea placeholder="Log …" id="commentField"></textarea>
+          </fieldset>
+        </form>
+      </div>
+
+    </section>
+  </main>
+  
+  <script src="./dist/serial-web.js" type="module"></script>
+</body>
+</html>

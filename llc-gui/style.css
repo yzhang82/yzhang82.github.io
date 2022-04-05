@@ -1,0 +1,191 @@
+body {
+    color: #000;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+fieldset, input, select, textarea {
+    margin-bottom: 1rem;
+}
+label {
+    margin-bottom: 0;
+}
+button {
+    height: 3rem;
+    line-height: 3rem;
+}
+textarea {
+    background-color: #f6f6f6;
+    min-height: 15rem;
+    width: 900px;
+    margin-bottom: 0;
+}
+input[type="number"] {
+    height: 3rem;
+    padding: .5rem;
+}
+textarea:focus,input[type="text"]:focus,input[type="number"]:focus {
+    border-color: #3778c2;
+}
+button {
+    background-color: #fff;
+    border: 0.1rem solid #3778c2;
+    color: #000;
+}
+button:hover {
+    background-color: #4b9fe1;
+}
+
+button:focus {
+    background-color: #4b9fe1;
+    outline: 2px solid #3778c2;
+}
+button[disabled] {
+    color: #666;
+}
+button[disabled]:hover {
+    background-color: #fff;
+    border-color: #3778c2;
+    color: #666;
+}
+#startBtn {
+    border: 0.1rem solid #3C8B3C;
+}
+#startBtn:hover {
+    background-color: #449d44;
+}
+#startBtn:focus {
+    background-color: #449d44;
+    outline: 2px solid #3C8B3C;
+}
+#startBtn[disabled]:hover {
+    background-color: #fff;
+    border-color: #3C8B3C;
+}
+#stopBtn,.redBtn {
+    border: 0.1rem solid #be3834;
+}
+#stopBtn:hover,.redBtn:hover {
+    background-color: #d9534f;
+}
+#stopBtn:focus,.redBtn:focus {
+    background-color: #d9534f;
+    outline: 2px solid #be3834;
+}
+#stopBtn[disabled]:hover {
+    background-color: #fff;
+    border-color: #be3834;
+}
+.wrapper {
+    max-width: 1000px;
+    margin-top: 10px;
+}
+.flex-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.flex-container-m1 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 5px;
+}
+.flex-container-m2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.panel-ind {
+    background-color: #f6f6f6;
+    padding: 5px;
+    min-width: 200px;
+}
+.panel-ind span {
+    font-size: 1.5rem;
+}
+.panel-main {
+    background-color: #f0f0f0;
+    padding: 0 10px;
+    min-width: 820px;
+}
+.panel-left {
+    background-color: #f0f0f0;
+    padding: 0 10px;
+    min-width: 320px;
+    width: 35%;
+}
+h3 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+.panel-right {
+    background-color: #f0f0f0;
+    min-width: 480px;
+    padding: 0 10px;
+    width: 65%;
+}
+.schematic {
+    width: 600px;
+    height: 192px;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#hvField {
+    position: absolute;
+    margin-top: 135px;
+    margin-left: 80px;
+    padding: 4px;
+    width: 60px;
+}
+#lvField {
+    position: absolute;
+    margin-top: 135px;
+    margin-left: 615px;
+    padding: 4px;
+    width: 60px;
+}
+#tempField {
+    position: absolute;
+    margin-top: 135px;
+    margin-left: 310px;
+    padding: 4px;
+    width: 60px;
+}
+#ctField,#c1Field,#c2Field {
+    position: absolute;
+    margin-left: 475px;
+    padding: 4px;
+    width: 60px;
+}
+#c1Field,#c2Field {
+    height: 24px;
+    font-size: 0.75em;
+}
+#ctField {
+    margin-top: 15px;
+}
+#c1Field {
+    margin-top: 110px;
+}
+#c2Field {
+    margin-top: 135px;
+}
+.flex-container label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.flex-container input[type="number"] {
+    width: 70px;
+}
+.flex-container input[type="text"] {
+    width: 70px;
+}
+#control-btns button {
+    width: 130px;
+}
